@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{receipt.date}}{% endblock %}
+{% block content %}
+  <h3>{{receipt.date}}, {{receipt.organization}}</h3>
+  {% for product in products %}
+    <p>Продукт:{{product.name}}, Цена:{{product.price}}</p>
+  {% endfor %}
+{% endblock %}
